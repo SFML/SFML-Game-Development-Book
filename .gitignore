@@ -1,0 +1,21 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Project files
+*.sublime-project
+*.sublime-workspace
+
+# Generated folders
+CMake/Build/*
+CMake/Install/*
+abandoned
