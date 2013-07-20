@@ -16,6 +16,7 @@ Textures::ID toTextureID(Aircraft::Type type)
 		case Aircraft::Raptor:
 			return Textures::Raptor;
 	}
+	return Textures::Eagle;
 }
 
 Aircraft::Aircraft(Type type, const TextureHolder& textures)

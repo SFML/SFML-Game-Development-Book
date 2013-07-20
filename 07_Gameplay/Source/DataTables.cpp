@@ -61,7 +61,7 @@ std::vector<PickupData> initializePickupData()
 	std::vector<PickupData> data(Pickup::TypeCount);
 	
 	data[Pickup::HealthRefill].texture = Textures::HealthRefill;
-	data[Pickup::HealthRefill].action = std::bind(&Aircraft::repair, _1, 25);
+	data[Pickup::HealthRefill].action = [] (Aircraft& a) { a.repair(25); };
 	
 	data[Pickup::MissileRefill].texture = Textures::MissileRefill;
 	data[Pickup::MissileRefill].action = std::bind(&Aircraft::collectMissiles, _1, 3);
