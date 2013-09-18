@@ -67,8 +67,8 @@ struct AircraftMissileTrigger
 Player::Player(sf::TcpSocket* socket, sf::Int32 identifier, const KeyBinding* binding)
 : mKeyBinding(binding)
 , mCurrentMissionStatus(MissionRunning)
-, mSocket(socket)
 , mIdentifier(identifier)
+, mSocket(socket)
 {
 	// Set initial action bindings
 	initializeActions();

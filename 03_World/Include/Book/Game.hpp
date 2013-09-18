@@ -35,7 +35,7 @@ class Game : private sf::NonCopyable
 	  	sf::Font				mFont;
 		sf::Text				mStatisticsText;
 		sf::Time				mStatisticsUpdateTime;
-		std::size_t			mStatisticsNumFrames;
+		std::size_t				mStatisticsNumFrames;
 };
 
 #endif // BOOK_GAME_HPP

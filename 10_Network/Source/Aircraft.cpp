@@ -23,6 +23,8 @@ namespace
 Aircraft::Aircraft(Type type, const TextureHolder& textures, const FontHolder& fonts)
 : Entity(Table[type].hitpoints)
 , mType(type)
+, mSprite(textures.get(Table[type].texture), Table[type].textureRect)
+, mExplosion(textures.get(Textures::Explosion))
 , mFireCommand()
 , mMissileCommand()
 , mFireCountdown(sf::Time::Zero)
@@ -31,8 +33,7 @@ Aircraft::Aircraft(Type type, const TextureHolder& textures, const FontHolder& f
 , mShowExplosion(true)
 , mExplosionBegan(false)
 , mSpawnedPickup(false)
-, mSprite(textures.get(Table[type].texture), Table[type].textureRect)
-, mExplosion(textures.get(Textures::Explosion))
+, mPickupsEnabled(true)
 , mFireRateLevel(1)
 , mSpreadLevel(1)
 , mMissileAmmo(2)
@@ -41,7 +42,6 @@ Aircraft::Aircraft(Type type, const TextureHolder& textures, const FontHolder& f
 , mDirectionIndex(0)
 , mMissileDisplay(nullptr)
 , mIdentifier(0)
-, mPickupsEnabled(true)
 {
 	mExplosion.setFrameSize(sf::Vector2i(256, 256));
 	mExplosion.setNumFrames(16);

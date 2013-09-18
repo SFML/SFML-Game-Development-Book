@@ -12,8 +12,8 @@
 
 World::World(sf::RenderWindow& window, FontHolder& fonts)
 : mWindow(window)
-, mFonts(fonts)
 , mWorldView(window.getDefaultView())
+, mFonts(fonts)
 , mTextures() 
 , mSceneGraph()
 , mSceneLayers()
