@@ -26,8 +26,6 @@ class Aircraft : public Entity
 	public:
 								Aircraft(Type type, const TextureHolder& textures, const FontHolder& fonts);
 
-		virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
-		virtual void 			updateCurrent(sf::Time dt, CommandQueue& commands);
 		virtual unsigned int	getCategory() const;
 		virtual sf::FloatRect	getBoundingRect() const;
 		virtual void			remove();
@@ -50,6 +48,8 @@ class Aircraft : public Entity
 
 
 	private:
+		virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
+		virtual void 			updateCurrent(sf::Time dt, CommandQueue& commands);
 		void					updateMovementPattern(sf::Time dt);
 		void					checkPickupDrop(CommandQueue& commands);
 		void					checkProjectileLaunch(sf::Time dt, CommandQueue& commands);
