@@ -136,13 +136,13 @@ std::string toString(sf::Keyboard::Key key)
 void centerOrigin(sf::Sprite& sprite)
 {
 	sf::FloatRect bounds = sprite.getLocalBounds();
-	sprite.setOrigin(std::floor(bounds.width / 2.f), std::floor(bounds.height / 2.f));
+	sprite.setOrigin(std::floor(bounds.left + bounds.width / 2.f), std::floor(bounds.top + bounds.height / 2.f));
 }
 
 void centerOrigin(sf::Text& text)
 {
 	sf::FloatRect bounds = text.getLocalBounds();
-	text.setOrigin(std::floor(bounds.width / 2.f), std::floor(bounds.height / 2.f));
+	text.setOrigin(std::floor(bounds.left + bounds.width / 2.f), std::floor(bounds.top + bounds.height / 2.f));
 }
 
 float toDegree(float radian)
