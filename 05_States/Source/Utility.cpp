@@ -3,6 +3,8 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
 
+#include <cmath>
+
 
 void centerOrigin(sf::Sprite& sprite)
 {
