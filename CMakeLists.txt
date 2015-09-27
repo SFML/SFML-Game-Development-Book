@@ -111,8 +111,11 @@ macro(build_chapter CHAPTER_NAME)
 		set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_DEFINITIONS "SFML_STATIC")
 	endif()
 
-	# Link SFML
-	target_link_libraries(${PROJECT_NAME} ${SFML_LIBRARIES})
+	# Link SFML. For versions < 2.2, SFML_DEPENDENCIES is not defined, and we do not need to link dependencies
+	if(SFML_VERSION_MINOR LESS 2)
+        set(SFML_DEPENDENCIES "")
+	endif()
+	target_link_libraries(${PROJECT_NAME} ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
 
 	install(TARGETS ${PROJECT_NAME}	RUNTIME DESTINATION ${CHAPTER_NAME})
 
