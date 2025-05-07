@@ -3,7 +3,7 @@ SFML Game Development
 Code Base
 #####################
 
-# A Chinese translation of this README is available in [README_zh.md](README_zh.md).
+# A Chinese translation of this README is available in [ReadMe_zh.md](ReadMe_zh.md).
 
 This file explains how to build the code accompanying the book SFML Game Development.
 
