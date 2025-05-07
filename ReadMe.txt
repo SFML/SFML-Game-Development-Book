@@ -3,6 +3,8 @@ SFML Game Development
 Code Base
 #####################
 
+# A Chinese translation of this README is available in [README_zh.md](README_zh.md).
+
 This file explains how to build the code accompanying the book SFML Game Development.
 
 There are 10 directories that correspond to each of the chapters in the book. For example, 02_Resources contains the code for Chapter 2. The code for all chapters can be built at once.
